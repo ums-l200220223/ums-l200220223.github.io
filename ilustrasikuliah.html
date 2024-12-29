@@ -49,7 +49,7 @@
     <div class="container">
         <h1>Simulasi Metaflow</h1>
         <h3>Kode Python</h3>
-        <pre id="python-code">
+        <pre>
             from metaflow import FlowSpec, step
 
             class KuliahFlow(FlowSpec):
@@ -115,11 +115,12 @@
 
         </pre>
         <button onclick="runMetaflow()">Jalankan Simulasi</button>
+        <div id="logs"></div>
         <div class="output">
             <h3>Output:</h3>
             <pre id="output">Klik tombol untuk melihat hasilnya...</pre>
         </div>
-        <div id="logs"></div>
+        
     </div>
     <script>
         function runMetaflow() {
