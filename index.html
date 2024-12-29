@@ -24,18 +24,20 @@
         header p {
             margin: 10px 0;
         }
-        header button {
+        header button.github-button {
             background-color: #CDC1FF;
             color: white;
             border: none;
             padding: 10px 20px;
-            border-radius: 20px;
-            font-size: 1em;
             cursor: pointer;
-            transition: background-color 0.3s;
+            border-radius: 5px;
+            font-size: 16px;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-block;
         }
-        header button:hover {
-            background-color: #a698de;
+        header button.github-button:hover {
+            background-color: #E5D9F2;
         }
         .container {
             max-width: 1200px;
@@ -98,6 +100,9 @@
     <header>
         <h1>Selamat Datang di Landing Page GitHub</h1>
         <p>ums-l200220223.github.io</p>
+        <a href="https://github.com/ums-l200220223/ums-l200220223.github.io" target="_blank">
+            <button class="github-button">View on GitHub</button>
+        </a>
         <button>Klik Saya</button>
     </header>
 
