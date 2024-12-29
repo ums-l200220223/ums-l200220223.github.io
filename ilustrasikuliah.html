@@ -9,13 +9,18 @@
             font-family: Arial, sans-serif;
             margin: 20px;
         }
+        header {
+            background-color: #A294F9;
+            color: white;
+            padding: 20px;
+        }
         .container {
             max-width: 900px;
             margin: 0 auto;
             text-align: center;
         }
         pre {
-            background-color: #f4f4f4;
+            background-color: #F5EFFF;
             padding: 15px;
             border-radius: 5px;
             text-align: left;
@@ -23,7 +28,7 @@
             border: 1px solid #ddd;
         }
         button {
-            background-color: #4CAF50;
+            background-color: #A294F9;
             color: white;
             border: none;
             padding: 10px 20px;
@@ -32,10 +37,7 @@
             font-size: 16px;
         }
         button:hover {
-            background-color: #45a049;
-        }
-        h1 {
-            color: #333;
+            background-color: #8c7aff;
         }
         h3 {
             color: #555;
@@ -43,11 +45,25 @@
         .output {
             margin-top: 20px;
         }
+        #logs {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .log-entry {
+            background: #CDC1FF;
+            padding: 10px;
+            border-radius: 3px;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Simulasi Metaflow</h1>
+        <header>
+            <h1>Simulasi Metaflow</h1>
+        </header>
+        
         <h3>Kode Python</h3>
         <pre>
             from metaflow import FlowSpec, step
