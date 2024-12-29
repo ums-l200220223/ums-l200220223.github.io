@@ -57,9 +57,8 @@
 
                 @step
                 def start(self):
-                    "This is the 'start' step. All flows must have a step mamed 'start' that is the first step in the flow."
 
-                    print("Mula proses kuliah di Informatika.")
+                    print("Mulai proses kuliah di Informatika.")
                     self.next(self.bayar_spp)
 
                 @step
@@ -67,7 +66,7 @@
 
                     "Step untuk membayar SPP."
 
-                    print("Membayar 5PP.")
+                    print("Mahasiswa Membayar SPP.")
                     self.next(self.krs)
 
                 @step
@@ -75,7 +74,7 @@
 
                     """Step untuk mengisi KRS (Kartu Rencana Studi)."""
 
-                    print("Mengisi KRS.")
+                    print("Mahasiswa Mengisi KRS.")
                     self.mext(self.kuliah)
 
                 @step
@@ -83,7 +82,7 @@
 
                     """Step untuk menghadiri kuliah."""
 
-                    print("Menghadiri kuliah.")
+                    print("Mahasiswa Menghadiri kuliah.")
                     self.next(self.ujian)
 
                 @step
@@ -91,7 +90,7 @@
 
                     """Stop untuk mengikuti ujian akhir semester."""
 
-                    print("Mengikuti ujian akhir semester.")
+                    print("Mahasiswa Mengikuti ujian akhir semester.")
                     self.next(self.khs)
 
                 @step
@@ -99,7 +98,7 @@
 
                     """Step untuk mendapatkan KHS (Kartu Hasil Studi)."""
 
-                    print("Mendapatkan KHS.")
+                    print("Mahasiswa Mendapatkan KHS.")
                     self.next(self.end)
 
                 @step
@@ -108,7 +107,7 @@
                     """This is the 'end' step. All flows must have an 'end' step, which is the
                     last step in the flow."""
 
-                    print("Proses kuliah selesai.")
+                    print("Proses kuliah Mahasiswa selesai.")
 
             if __name__ == "__main__":
                 KuliahFlow()
@@ -120,39 +119,30 @@
             <h3>Output:</h3>
             <pre id="output">Klik tombol untuk melihat hasilnya...</pre>
         </div>
+        <div id="logs"></div>
     </div>
     <script>
-        // Function to fetch and display Python code
-        function loadPythonCode() {
-            fetch('ilustrasikuliah.py') // Assumes Python file is in the static directory
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('python-code').textContent = data;
-                })
-                .catch(error => {
-                    document.getElementById('python-code').textContent = "Error loading Python code: " + error;
-                });
-        }
-
-        // Function to run Metaflow simulation
         function runMetaflow() {
-            fetch('/run_metaflow', { method: 'POST' })
-                .then(response => response.json())
-                .then(data => {
-                    const outputElement = document.getElementById('output');
-                    if (data.error) {
-                        outputElement.textContent = `Error: ${data.error}`;
-                    } else {
-                        outputElement.textContent = data.output;
-                    }
-                })
-                .catch(error => {
-                    document.getElementById('output').textContent = `Error: ${error}`;
-                });
+            const logs = [];
+            logs.push("Mulai proses kuliah di Informatika.");
+
+            const sppTerbayar = true;
+            if (sppTerbayar) {
+                logs.push("SPP berhasil dibayarkan.");
+                logs.push("Mahasiswa Membayar SPP.");
+                logs.push("Mahasiswa Menghadiri kuliah.");
+                logs.push("Mahasiswa Mengikuti ujian akhir semester.");
+                logs.push("Mahasiswa Mendapatkan KHS.");
+            } else {
+                logs.push("SPP belum dibayarkan. Proses dihentikan.");
+            }
+
+            logs.push("Proses kuliah Mahasiswa selesai.");
+
+            const logsDiv = document.getElementById('logs');
+            logsDiv.innerHTML = logs.map(log => `<div class='log-entry'>${log}</div>`).join('');
         }
 
-        // Load the Python code on page load
-        window.onload = loadPythonCode;
     </script>
 </body>
 </html>
