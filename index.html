@@ -3,80 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ums-l200220223.gihub.io</title>
+    <title>uns-l200220223.gihub.io</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             background-color: #f4f4f9;
         }
+        header {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            margin: 10px 0;
+        }
+        header button {
+            background-color: #FF5722;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        header button:hover {
+            background-color: #e64a19;
+        }
         .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
             text-align: center;
             background: #fff;
-            padding: 20px 30px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        h1 {
-            color: #333;
-        }
         .category {
-            margin-top: 20px;
+            margin: 30px 0;
         }
         .category h2 {
-            color: #007BFF;
+            color: #333;
+            margin-bottom: 20px;
         }
         .links {
-            margin-top: 10px;
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
         }
         .link-box {
-            width: 150px;
-            padding: 15px;
-            text-align: center;
-            background-color: #007BFF;
+            flex: 1;
+            max-width: 200px;
+            background-color: #fff;
+            border: 1px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s, transform 0.2s;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
         }
         .link-box:hover {
-            background-color: #0056b3;
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        .link-box:active {
-            transform: scale(0.95);
+        .link-box span {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #007BFF;
         }
         .link-box a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
             display: block;
             margin-top: 10px;
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to Our Landing Page Github ums-l200220223.github.io</h1>
-        <p>Select a page to visit:</p>
+    <header>
+        <h1>Selamat Datang di Landing Page GitHub</h1>
+        <p>ums-l200220223.github.io</p>
+        <button>Klik Saya</button>
+    </header>
 
+    <div class="container">
         <div class="category">
             <h2>Tugas Sebelum UTS</h2>
             <div class="links">
                 <div class="link-box">
-                    <span>Ilustrasi kuliah </span>
-                    <a href="ilustrasikuliah.html">lihat Tugas</a>
+                    <span>Tugas Sebelum UTS (ilustrasikuliah.py)</span>
+                    <a href="ilustrasikuliah.html">Lihat Tugas</a>
                 </div>
                 <div class="link-box">
-                    <span>Download Kode ilustrasikuliah.py</span>
-                    <a href="ilustrasikuliah.py">Download</a>
+                    <span>Tugas Sebelum UTS (ilustrasikuliah.py)</span>
+                    <a href="ilustrasikuliah.py">Download kode Tugas</a>
                 </div>
             </div>
         </div>
@@ -85,19 +120,23 @@
             <h2>Tugas Sebelum UAS</h2>
             <div class="links">
                 <div class="link-box">
-                    <span>Code Scraping WA </span>
-                    <a href="page3.html">lihat kode</a>
+                    <span>Tugas Sebelum UTS</span>
+                    <a href="page3.html">Lihat Tugas</a>
                 </div>
                 <div class="link-box">
-                    <span>Download Kode ScrapingWa </span>
-                    <a href="page4.ipynb">Download</a>
+                    <span>Tugas Sebelum UAS</span>
+                    <a href="page4.html">Lihat Tugas</a>
                 </div>
                 <div class="link-box">
-                    <span>Laporan Analisis Grup Wa </span>
-                    <a href="page4.html">lihat</a>
+                    <span>Tugas Sebelum UAS</span>
+                    <a href="page4.html">Lihat Tugas</a>
                 </div>
             </div>
         </div>
     </div>
+
+    <footer>
+        &copy; 2024 ums-l200220223.github.io . All rights reserved.
+    </footer>
 </body>
 </html>
