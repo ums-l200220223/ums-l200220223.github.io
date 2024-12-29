@@ -1,47 +1,103 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indeks Laporan dan Tugas</title>
+    <title>ums-l200220223.gihub.io</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             background-color: #f4f4f9;
         }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1rem 0;
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        main {
-            margin: 2rem;
+        h1 {
+            color: #333;
         }
-        a {
-            display: inline-block;
-            margin: 1rem;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            color: white;
+        .category {
+            margin-top: 20px;
+        }
+        .category h2 {
+            color: #007BFF;
+        }
+        .links {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .link-box {
+            width: 150px;
+            padding: 15px;
+            text-align: center;
             background-color: #007BFF;
-            border-radius: 5px;
-            font-size: 1.2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.2s;
         }
-        a:hover {
+        .link-box:hover {
             background-color: #0056b3;
+        }
+        .link-box:active {
+            transform: scale(0.95);
+        }
+        .link-box a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Indeks Laporan dan Tugas</h1>
-    </header>
-    <main>
-        <a href="ilustrasikuliah.py" target="_blank">Lihat Tugas Sebelum UTS</a>
-        <a href="tugas.html" target="_blank">Lihat Tugas Sebelum UAS</a>
-    </main>
+    <div class="container">
+        <h1>Welcome to Our Landing Page Github ums-l200220223.github.io</h1>
+        <p>Select a page to visit:</p>
+
+        <div class="category">
+            <h2>Tugas Sebelum UTS</h2>
+            <div class="links">
+                <div class="link-box">
+                    <span>Ilustrasi kuliah </span>
+                    <a href="ilustrasikuliah.html">lihat Tugas</a>
+                </div>
+                <div class="link-box">
+                    <span>Download Kode ilustrasikuliah.py</span>
+                    <a href="ilustrasikuliah.py">Download</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Tugas Sebelum UAS</h2>
+            <div class="links">
+                <div class="link-box">
+                    <span>Code Scraping WA </span>
+                    <a href="page3.html">lihat kode</a>
+                </div>
+                <div class="link-box">
+                    <span>Download Kode ScrapingWa </span>
+                    <a href="page4.ipynb">Download</a>
+                </div>
+                <div class="link-box">
+                    <span>Laporan Analisis Grup Wa </span>
+                    <a href="page4.html">lihat</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
