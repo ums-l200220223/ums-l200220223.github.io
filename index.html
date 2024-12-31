@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>uns-l200220223.gihub.io</title>
+    <title>ums-l200220223.github.io</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -59,6 +59,7 @@
             display: flex;
             justify-content: center;
             gap: 20px;
+            flex-wrap: wrap; /* Tambahkan agar elemen otomatis pindah ke baris baru */
         }
         .link-box {
             flex: 1;
@@ -76,9 +77,13 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .link-box span {
-            font-size: 1.2em;
+            font-size: 1em; /* Ukuran font lebih kecil */
             font-weight: bold;
             color: #1A1A1D;
+            display: block; /* Pastikan teks tetap di satu blok */
+            word-wrap: break-word; /* Potong teks panjang */
+            max-width: 180px; /* Batas maksimal lebar */
+            margin: 5px auto;
         }
         .link-box a {
             display: block;
