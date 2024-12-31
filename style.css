@@ -81,22 +81,32 @@ footer {
     background: #CDC1FF;
 }
 
-/* Gaya untuk tombol */
+
+/* Gaya untuk tombol berbasis <a> */
 .btn {
     display: inline-block;
-    background-color: #A294F9; /* Warna hijau */
-    color: white; /* Warna teks */
-    font-family: 'Roboto', sans-serif; /* Font yang sama dengan header */
-    font-size: 1rem; /* Ukuran font */
-    font-weight: 500; /* Tebal teks sedang */
     text-decoration: none; /* Hilangkan garis bawah */
+    background-color: #A294F9; /* Warna biru */
+    color: white; /* Warna teks */
+    font-family: 'Roboto', sans-serif; /* Font */
+    font-size: 1rem; /* Ukuran font */
+    font-weight: 500; /* Ketebalan teks */
     padding: 10px 20px; /* Ruang di dalam tombol */
+    border: none; /* Hilangkan border */
     border-radius: 5px; /* Sudut tombol melengkung */
-    transition: background-color 0.3s ease; /* Efek transisi */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efek transisi */
+    cursor: pointer; /* Ubah kursor menjadi pointer */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Efek bayangan */
 }
 
-/* Hover efek untuk tombol */
+/* Efek hover */
 .btn:hover {
-    background-color: #CDC1FF; /* Warna hijau lebih gelap saat hover */
-    cursor: pointer; /* Ubah kursor saat hover */
+    background-color: #CDC1FF; /* Warna biru lebih gelap */
+    transform: scale(1.05); /* Sedikit perbesar ukuran */
+}
+
+/* Efek aktif */
+.btn:active {
+    transform: scale(0.95); /* Sedikit perkecil ukuran */
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2); /* Kurangi bayangan */
 }
