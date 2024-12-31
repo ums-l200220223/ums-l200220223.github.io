@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Analisis WhatsApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Laporan Analisis WhatsApp</h1>
+    </header>
+    <main>
+        <div class="container">
+            <section class="info">
+                <h2>Data Mahasiswa</h2>
+                <div><label>Nama: </label> <span id="nama">Fauzan Bayu Samudra</span></div>
+                <div><label>NIM: </label> <span id="nim">L200220223</span></div>
+                <div><label>Kelas: </label> <span id="kelas">IPSD-C</span></div>
+            </section>
+            <section class="report-content">
+                <h2>Proses Analisis Menggunakan Jupyter Notebook</h2>
+                <ul>
+                    <li>Export konten group WhatsApp menjadi file teks 
+                        <img src="images/txt.png" alt="File teks">
+                    </li>
+                    <li>Merubah file teks (.txt) menjadi file (.csv) 
+                        <img src="images/csv.png" alt="File CSV">
+                    </li>
+                    <li>Melakukan kompres file .csv ke dalam .tar 
+                        <img src="images/tar.png" alt="File TAR">
+                    </li>
+                    <li>Melakukan pembersihan data untuk hanya mengambil angka, huruf, dan tanda baca umum dan disimpan kedalam tar 
+                        <img src="images/cleaned.png" alt="Data cleaned">
+                    </li>
+                    <li>Melakukan scale data untuk preprocessing dari data didalam tar 
+                        <img src="images/scale.png" alt="Data scaled">
+                    </li>
+                    <li>Menyimpan data matrix dalam bentuk CSV ke dalam TAR 
+                        <img src="images/matriksv.png" alt="Matrix CSV">
+                    </li>
+                    <li>Mendapatkan kata-kata yang paling sering muncul di setiap kluster (top words) 
+                        <img src="images/topword.png" alt="Top words">
+                    </li>
+                    <li>Membuat matriks fitur berbasis teks menggunakan CountVectorizer 
+                        <img src="images/kolomfitur.png" alt="Fitur kolom">
+                    </li>
+                    <li>Melakukan clustering menggunakan algoritma KMeans 
+                        <img src="images/kmeans2.png" alt="KMeans clustering">
+                    </li>
+                    <li>Menganalisis kluster pesan dan mengidentifikasi tiga kata paling sering muncul 
+                        <img src="images/analysis.png" alt="Cluster analysis">
+                    </li>
+                </ul>
+            </section>
+            <section class="report-content">
+                <h2>Proses Analisis Menggunakan Scale_data.py dan ManyKmeansFlow.py</h2>
+                <ul>
+                    <li>Export konten group WhatsApp menjadi file teks 
+                        <img src="images/txt.png" alt="File teks">
+                    </li>
+                    <li>Merubah file teks (.txt) menjadi file (.csv) 
+                        <img src="images/csv.png" alt="File CSV">
+                    </li>
+                    <li>Melakukan kompres file .csv ke dalam .tar 
+                        <img src="images/tar.png" alt="File TAR">
+                    </li>
+                    <li>Melakukan pembersihan data untuk hanya mengambil angka, huruf, dan tanda baca umum 
+                        <img src="images/cleaned.png" alt="Data cleaned">
+                    </li>
+                    <li>Melakukan scale data untuk preprocessing 
+                        <img src="images/scaledata.png" alt="Data scaled">
+                    </li>
+                    <li>Melakukan analysis dengan `analyze_kmeans.py` 
+                        <img src="images/analyze.png" alt="Analyze">
+                    </li>
+                    <li>Melakukan metaflow dengan `ManyKmeansFlow.py` 
+                        <img src="images/ManyKmeans.png" alt="ManyKmeansFlow">
+                    </li>
+                    <li>Hasil menunjukkan error karena kegagalan AWS 
+                        <img src="images/Kmeans.png" alt="Error KMeans">
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 ums-l200220223.github.io . All rights reserved.</p>
+    </footer>
+    <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
+
