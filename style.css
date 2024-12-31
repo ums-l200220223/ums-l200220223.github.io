@@ -80,3 +80,23 @@ footer {
 .scroll-to-top:hover {
     background: #CDC1FF;
 }
+
+/* Gaya untuk tombol */
+.btn {
+    display: inline-block;
+    background-color: #A294F9; /* Warna hijau */
+    color: white; /* Warna teks */
+    font-family: 'Roboto', sans-serif; /* Font yang sama dengan header */
+    font-size: 1rem; /* Ukuran font */
+    font-weight: 500; /* Tebal teks sedang */
+    text-decoration: none; /* Hilangkan garis bawah */
+    padding: 10px 20px; /* Ruang di dalam tombol */
+    border-radius: 5px; /* Sudut tombol melengkung */
+    transition: background-color 0.3s ease; /* Efek transisi */
+}
+
+/* Hover efek untuk tombol */
+.btn:hover {
+    background-color: #CDC1FF; /* Warna hijau lebih gelap saat hover */
+    cursor: pointer; /* Ubah kursor saat hover */
+}
